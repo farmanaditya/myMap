@@ -108,14 +108,15 @@
                 "input": "src/assets",
                 "output": "assets"
               },
+
               {
                 "glob": "**/*.svg",
                 "input": "node_modules/ionicons/dist/ionicons/svg",
                 "output": "./svg"
               }
             ],
-            "styles": ["src/global.scss", "src/theme/variables.scss"],
-            "scripts": []
+            "styles": ["src/global.scss", "src/theme/variables.scss", "node_modules/bootstrap/dist/css/bootstrap.min.css" ],
+            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" ]
           },
           "configurations": {
             "ci": {
@@ -139,7 +140,8 @@
   "cli": {
     "schematicCollections": [
       "@ionic/angular-toolkit"
-    ]
+    ],
+    "analytics": "4d287bd8-f98c-45e7-8660-fcd5f75749ca"
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {

@@ -1,15 +1,26 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title> MyMap </ion-title>
+    <ion-title>Farmanaditya's Map</ion-title>
+
+    <ion-item slot="end">
+      <ion-select interface="popover" [(ngModel)]="selectedBasemap" (ionChange)="changeBasemap()" placeholder="Select Basemap">
+        <ion-select-option value="streets">Streets</ion-select-option>
+        <ion-select-option value="topo">Topographic</ion-select-option>
+        <ion-select-option value="satellite">Satellite</ion-select-option>
+        <ion-select-option value="topo-vector">Topo Vector</ion-select-option>
+        <ion-select-option value="gray-vector">Gray Vector</ion-select-option>
+      </ion-select>
+    </ion-item>
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Farmaanditya's Map</ion-title>
+      <ion-title size="large">Farmanaditya's Map</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container"></div>
+  <div id="container" style="height: 100%;"></div>
 </ion-content>
